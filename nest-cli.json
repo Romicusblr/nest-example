@@ -1,0 +1,31 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/docgen/src",
+  "compilerOptions": {
+    "plugins": [
+      "@nestjs/swagger"
+    ]
+  },
+  "monorepo": true,
+  "root": "apps/accounting",
+  "projects": {
+    "docgen": {
+      "type": "application",
+      "root": "apps/docgen",
+      "entryFile": "main",
+      "sourceRoot": "apps/docgen/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/docgen/tsconfig.app.json"
+      }
+    },
+    "info": {
+      "type": "application",
+      "root": "apps/info",
+      "entryFile": "main",
+      "sourceRoot": "apps/info/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/info/tsconfig.app.json"
+      }
+    }
+  }
+}
